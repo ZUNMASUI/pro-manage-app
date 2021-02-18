@@ -2,16 +2,17 @@
   <nav class="nav">
     <ul class="header_menu">
       <li class="nav-link"><%= current_user.name %>さん</li>
-      <%# <li class="team-link">チームA</li> %>
       <li class="header_menu_title"><%= link_to "タスク管理", root_path, class: "nav-link" %></li>
       <li>
         <ul class="header_menu_inner">
+
           <li>
-            <%= link_to "#", class: "nav-link" do %>
+            <%= link_to new_list_path, class: "nav-link" do %>
               <span class="mr-1">リストを作成</span>
               <i class="fas fa-edit"></i>
             <% end %>
           </li>
+
           <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
         </ul>
       </li>
