@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   # 先ほど追加したルーティングは削除する
   # そしてこの行を追加する
-  resources :list, only: %i(new create)
+  resources :list, only: %i(new create edit update)
 end
